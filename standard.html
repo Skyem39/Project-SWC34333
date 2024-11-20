@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the comfortable facilities of the Standard Room at Bukit Pandan Hotel.">
+    <title>Standard Room - Facilities - Bukit Pandan Hotel</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #000000;
+        }
+
+        header {
+            background-color: #000000;
+            color: white;
+            padding: 0rem;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0px 0px;
+        }
+        nav img {
+            height: 200px;
+            margin-right: 120px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #FFD700;
+            transition: color 0.3s ease-in;
+        }
+
+        /* Dropdown Styling */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000000;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content li {
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content li a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content li a:hover {
+            background-color: #FFD700;
+			color: #000000;
+        }
+
+        /* Show dropdown content on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .suite {
+            padding: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease-in;
+        }
+
+        .suite h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .facility {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .facility img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Align room details to the left */
+        .facility-details {
+            max-width: 800px;
+            text-align: left;  /* Align text to the left */
+            margin-top: 1rem;
+        }
+
+        .facility-title {
+            font-size: 1.8rem;
+            color: #FFD700;
+            margin-bottom: 1rem;
+        }
+
+        .facility p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #000000;
+            color: white;
+            position: relative;
+        }
+
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <img src="logobp.png" alt="Bukit Pandan Hotel Logo" class="logo"> <!-- Replace with your logo file -->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="rooms.html">Your Room</a>
+                    <ul class="dropdown-content">
+                        <li><a href="standard.html" class="active">Standard Room</a></li>
+                        <li><a href="deluxe.html">Deluxe Room</a></li>
+                        <li><a href="executive.html">Executive Room</a></li>
+                    </ul>
+                </li>
+                <li><a href="bookings.html">Bookings</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="suite">
+            <h1>Standard Room Facilities</h1>
+            &nbsp;
+			
+            <div class="facility">
+                <img src="queenbed.jpg" alt="Standard Room">
+                <div class="facility-details">
+					&nbsp;
+                    <div class="facility-title">Details</div>
+                    <p>
+                        <strong>Adults:</strong> 2<br>
+                        <strong>Size:</strong> 28.7m²<br>
+                        <strong>Bed Type:</strong> King/ Twin<br>
+                        <strong>Amenities:</strong> Ironing Facilities (Upon Availability), 50” LED Television, Coffee and Tea Making Facilities, Hair Dryer, In-Room Safe, Minibar, Satellite/Cable Television With In-House Movie Channels, Secure Key Access, Telephone, Toiletries, Yukata and Slippers<br>
+                        <strong>Room Features:</strong> In-Room Motion Sensor, LED Touch Screen Smart Lighting Mirror, Reading and Writing Desk, Universal Sockets and USB Plug-in Ports
+                    </p>
+					&nbsp;
+					&nbsp;
+                    <p><strong>Note:</strong></p>
+                    <p>
+                        This is a non-smoking room. A RM500 cleaning fee shall be levied for any violation.<br>
+                        Kindly be informed that durian, mangosteen, and jackfruit are strictly prohibited. A cleaning fee of RM1000 shall be levied for any violation.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Bukit Pandan Hotel. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms and Conditions</a></p>
+    </footer>
+</body>
+</html>

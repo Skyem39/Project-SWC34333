@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn more about our hotel, our story, and our mission to provide the best service.">
+    <title>About Us - Bukit Pandan Hotel</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Basic styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #000000;
+        }
+
+        header {
+            background-color: #000000;
+            color: white;
+            padding: 0rem;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav img {
+            height: 200px;
+            margin-right: 120px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            position: relative;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #f4d03f;
+            transition: color 0.3s ease-in;
+        }
+
+        /* Dropdown menu */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000000;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content li {
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a {
+            display: block;
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f4d03f;
+            color: #000000;
+        }
+
+        /* Show dropdown on hover */
+        nav ul li:hover .dropdown-content {
+            display: block;
+        }
+
+        .about-us {
+            padding: 3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease-in;
+        }
+
+        .about-us h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .about-us p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-us ul {
+            padding-left: 20px;
+        }
+
+        .about-us li {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight {
+            color: #f4d03f;
+            font-weight: bold;
+        }
+		
+		/* Centering the image */
+        .about-us img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Animation keyframes */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #000000;
+            color: white;
+            position: relative;
+        }
+
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Toggle section style */
+        .toggle-section {
+            cursor: pointer;
+            background-color: #f4d03f;
+            padding: 0.5rem;
+            text-align: center;
+            margin-top: 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in;
+            font-weight: bold;
+        }
+
+        .toggle-section:hover {
+            background-color: #000000;
+            color: white;
+        }
+
+        .hidden-content {
+            display: none;
+            padding: 1rem;
+            background-color: #f4f4f4;
+            margin-top: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <img src="logobp2.png" alt="Logo"> <!-- Adjust logo size if needed -->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li class="dropdown">
+                    <a href="rooms.html">Your Room</a>
+                    <!-- Dropdown Menu -->
+                    <ul class="dropdown-content">
+                        <li><a href="standard.html">Standard Room</a></li>
+                        <li><a href="deluxe.html">Deluxe Room</a></li>
+                        <li><a href="executive.html">Executive Room</a></li>
+                    </ul>
+                </li>
+                <li><a href="bookings.html">Bookings</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="about-us">
+            <h1>About Us</h1>
+            <p>Welcome to <span class="highlight">Bukit Pandan Hotel</span>, where luxury meets comfort. Our story began in <span class="highlight">2020</span>, with the goal of offering world-class hospitality and creating unforgettable experiences for our guests.</p>
+            <p>Located in the heart of <span class="highlight">Kuala Lumpur</span>, our hotel offers a wide range of amenities, from luxurious rooms and suites to top-notch dining and recreational facilities.</p>
+            <p>We're not just a hotel; we're a home away from home. Our dedication to providing exceptional service and unforgettable experiences has earned us a place in the International Hotel Awards. Sleep soundly knowing you're staying with the best in the business. Book your stay and see why we're award-winning.</p>
+            <img src="aboutus.webP" alt="aboutus">
+            
+            
+            <div id="mission" class="toggle-section">Our Mission</div>
+            <div id="missionContent" class="hidden-content">
+                <p>We aim to provide the best service to all our guests with a focus on excellence, integrity, and innovation.</p>
+            </div>
+
+            
+            <div id="values" class="toggle-section">Our Values</div>
+            <div id="valuesContent" class="hidden-content">
+                <ul>
+                    <li><strong>Excellence:</strong> We aim to deliver the best in everything we do.</li>
+                    <li><strong>Integrity:</strong> Trust and transparency are at the core of our operations.</li>
+                    <li><strong>Innovation:</strong> We constantly seek new ways to enhance the guest experience.</li>
+                    <li><strong>Sustainability:</strong> We are committed to eco-friendly practices.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript to make toggle sections interactive -->
+    <script>
+        document.getElementById("mission").addEventListener("click", function() {
+            const missionContent = document.getElementById("missionContent");
+            missionContent.style.display = missionContent.style.display === "none" || missionContent.style.display === "" ? "block" : "none";
+        });
+
+        document.getElementById("values").addEventListener("click", function() {
+            const valuesContent = document.getElementById("valuesContent");
+            valuesContent.style.display = valuesContent.style.display === "none" || valuesContent.style.display === "" ? "block" : "none";
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Bukit Pandan Hotel. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms and Conditions</a></p>
+    </footer>
+</body>
+</html>

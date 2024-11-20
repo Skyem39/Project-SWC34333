@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the different room types at Bukit Pandan Hotel.">
+    <title>Your Room - Bukit Pandan Hotel</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #000000;
+        }
+
+        header {
+            background-color: #000000;
+            color: white;
+            padding: 0rem;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0px 0px;
+        }
+
+        nav img {
+            height: 200px;
+            margin-right: 120px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #FFD700;
+            transition: color 0.3s ease-in;
+        }
+
+        /* Dropdown Styling */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000000;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content li {
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content li a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content li a:hover {
+            background-color: #FFD700;
+			color: #000000;
+        }
+
+        /* Show dropdown content on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .room-section {
+            padding: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in;
+            text-align: center;
+        }
+
+        .room-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .room-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .room-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .room-buttons a {
+            display: flex;
+            align-items: center;
+            background-color: #000000;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            width: 250px;
+            text-align: left;
+        }
+
+        .room-buttons a img {
+            width: 40px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .room-buttons a:hover {
+            background-color: #FFD700;
+			color: #000000;
+			
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #000000;
+            color: white;
+            position: relative;
+        }
+
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <img src="logobp.png" alt="Bukit Pandan Hotel Logo" class="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="rooms.html">Your Room</a>
+                    <ul class="dropdown-content">
+                        <li><a href="standard.html">Standard Room</a></li>
+                        <li><a href="deluxe.html">Deluxe Room</a></li>
+                        <li><a href="executive.html">Executive Room</a></li>
+                    </ul>
+                </li>
+                <li><a href="bookings.html">Bookings</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="room-section">
+            <h1>Choose Your Room</h1>
+            <p>Explore the different room types at Bukit Pandan Hotel and choose the one that suits you best. Each room is designed for your comfort, with unique features to make your stay special.</p>
+
+            <div class="room-buttons">
+                <a href="standard.html">
+                    <div>
+                        <h3>Standard Room</h3>
+						&nbsp;
+                        <p>Our Standard Room offers the perfect balance of comfort and affordability. Ideal for solo travelers or couples looking for a cozy stay.</p>
+                    </div>
+                </a>
+                <a href="deluxe.html">
+                    <div>
+                        <h3>Deluxe Room</h3>
+						&nbsp;
+                        <p>Indulge in luxury with our Deluxe Room. With a larger space and premium amenities, it’s perfect for those who enjoy a touch of elegance during their stay.</p>
+                    </div>
+                </a>
+                <a href="executive.html">
+                    <div>
+                        <h3>Executive Room</h3>
+						&nbsp;
+                        <p>For the discerning traveler, the Executive Room provides the ultimate in comfort and service. Featuring modern furnishings and exclusive privileges.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Bukit Pandan Hotel. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms and Conditions</a></p>
+    </footer>
+</body>
+</html>

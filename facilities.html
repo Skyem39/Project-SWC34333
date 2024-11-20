@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the luxurious facilities offered at Bukit Pandan Hotel.">
+    <title>Facilities - Bukit Pandan Hotel</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #000000;
+        }
+
+        header {
+            background-color: #000000;
+            color: white;
+            padding: 0rem;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0px 0px;
+        }
+
+        nav img {
+            height: 200px;
+            margin-right: 120px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            position: relative;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #FFD700;
+            transition: color 0.3s ease-in;
+        }
+
+        /* Dropdown Styling */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000000;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content li {
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content li a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content li a:hover {
+            background-color: #FFD700;
+            color: #000000;
+        }
+
+        /* Show dropdown content on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .facilities {
+            padding: 3rem;
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease-in;
+        }
+
+        .facilities h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .facilities p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Facilities section */
+        .facility {
+            margin-bottom: 2rem;
+        }
+
+        .facility img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .facility-title {
+            font-size: 1.5rem;
+            color: #FFD700;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Animation keyframes */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #000000;
+            color: white;
+            position: relative;
+        }
+
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Interactive feature: Toggle values */
+        #mission, #values {
+            cursor: pointer;
+            background-color: #FFD700;
+            padding: 0.5rem;
+            text-align: center;
+            margin-top: 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in;
+        }
+
+        #mission:hover, #values:hover {
+            background-color: #000000;
+            color: white;
+        }
+
+        .hidden-content {
+            display: none;
+            padding: 1rem;
+            background-color: #f4f4f4;
+            margin-top: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <img src="logobp2.png" alt="Logo" class="Logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="rooms.html">Your Room</a>
+                    <ul class="dropdown-content">
+                        <li><a href="standard.html">Standard Room</a></li>
+                        <li><a href="deluxe.html">Deluxe Room</a></li>
+                        <li><a href="executive.html">Executive Room</a></li>
+                    </ul>
+                </li>
+                <li><a href="bookings.html">Bookings</a></li>
+                <li><a href="facilities.html" class="active">Facilities</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="facilities">
+            <h1>Our Facilities</h1>
+            <p>At Bukit Pandan Hotel, we offer a range of facilities designed to ensure your stay is as comfortable and enjoyable as possible.</p>
+
+            <!-- Facility 1 -->
+            <div class="facility">
+                <img src="pool.jpg" alt="Outdoor Swimming Pool">
+                <div class="facility-title">Outdoor Swimming Pool</div>
+                <p>Our infinity pool offers a breathtaking view of the city skyline, perfect for relaxing or enjoying a refreshing dip.</p>
+            </div>
+
+            <!-- Facility 2 -->
+            <div class="facility">
+                <img src="gym.jpg" alt="Fitness Center">
+                <div class="facility-title">Fitness Center</div>
+                <p>Stay fit and healthy during your stay at our state-of-the-art fitness center, fully equipped with modern machines and personal trainers.</p>
+            </div>
+
+            <!-- Facility 3 -->
+            <div class="facility">
+                <img src="spa.jpg" alt="Luxury Spa">
+                <div class="facility-title">Luxury Spa</div>
+                <p>Indulge in a relaxing experience at our luxury spa, offering a variety of treatments and massages to rejuvenate your body and mind.</p>
+            </div>
+
+            <!-- Facility 4 -->
+            <div class="facility">
+                <img src="restaurant.jpg" alt="Restaurant">
+                <div class="facility-title">Restaurant</div>
+                <p>Meals at our gourmet restaurant, featuring local and international cuisines prepared by world-class chefs.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Bukit Pandan Hotel. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms and Conditions</a></p>
+    </footer>
+</body>
+</html>

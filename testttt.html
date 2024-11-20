@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Bukit Pandan Hotel, your luxury escape in Kuala Lumpur.">
+    <title>Home - Bukit Pandan Hotel</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic styles */
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #004d99;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        nav {
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        .hero-section {
+            background-image: url('.jpg'); /* Replace with your actual hero image */
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-section h1 {
+            font-size: 4rem;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-section p {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .button {
+            padding: 1rem 2.5rem;
+            margin-top: 1.5rem;
+            background-color: #ffd700;
+            color: #004d99;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+            position: relative;
+            z-index: 1;
+            font-size: 1.2rem;
+        }
+
+        .button:hover {
+            background-color: #ffcc00;
+            transform: translateY(-2px);
+        }
+
+        /* Content Section */
+        .content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 2.5rem;
+            color: #004d99;
+            margin-bottom: 1rem;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-size: 1.8rem;
+            color: #004d99;
+        }
+
+        .card p {
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #004d99;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <h1>Bukit Pandan Hotel</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="rooms.html">Rooms and Suites</a></li>
+                <li><a href="bookings.html">Bookings</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div>
+            <h1>Welcome to Bukit Pandan Hotel</h1>
+            <p>Your luxury escape in the heart of Kuala Lumpur</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content">
+        <h2>Explore Our Amenities</h2>
+        <p>Discover what we offer to make your stay unforgettable.</p>
+        <div class="grid-container">
+            <div class="card">
+                <h3>Luxurious Rooms</h3>
+                <p>Stay in style with our beautifully designed rooms.</p>
+            </div>
+            <div class="card">
+                <h3>Gourmet Dining</h3>
+                <p>Enjoy culinary delights at our exquisite restaurants.</p>
+            </div>
+            <div class="card">
+                <h3>Relaxation & Wellness</h3>
+                <p>Unwind at our spa and wellness center.</p>
+            </div>
+            <div class="card">
+                <h3>Cultural Experiences</h3>
+                <p>Explore the rich culture and vibrant lifestyle of Kuala Lumpur.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Bukit Pandan Hotel. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms and Conditions</a></p>
+    </footer>
+</body>
+</html>

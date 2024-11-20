@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book your stay at Bukit Pandan Hotel in Kuala Lumpur.">
+    <title>Bookings - Bukit Pandan Hotel</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #000000;
+        }
+
+        header {
+            background-color: #000000;
+            color: white;
+            padding: 0rem;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0px 0px;
+        }
+
+        nav img {
+            height: 200px;
+            margin-right: 120px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            position: relative;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #FFD700;
+            transition: color 0.3s ease-in;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000000;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content li {
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content li a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content li a:hover {
+            background-color: #FFD700;
+            color: #000000;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .booking-form {
+            padding: 3rem;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in;
+        }
+
+        .booking-form h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .booking-form label {
+            font-weight: bold;
+            margin-top: 1rem;
+            display: block;
+            color: #000000;
+        }
+
+        .booking-form input[type="text"],
+        .booking-form input[type="date"],
+        .booking-form select,
+        .booking-form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .booking-form textarea {
+            resize: vertical;
+        }
+
+        .booking-form button {
+            width: 100%;
+            padding: 0.8rem;
+            margin-top: 1.5rem;
+            background-color: #FFD700;
+            color: white;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .booking-form button:hover {
+            background-color: #000000;
+            color: white;
+            transition: background-color 0.3s ease-in;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #000000;
+            color: white;
+            position: relative;
+        }
+
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="logobp.png" alt="Bukit Pandan Hotel Logo" class="logo"> <!-- Replace with your logo file -->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="rooms.html">Your Room</a>
+                    <ul class="dropdown-content">
+                        <li><a href="standard.html">Standard Room</a></li>
+                        <li><a href="deluxe.html">Deluxe Room</a></li>
+                        <li><a href="executive.html">Executive Room</a></li>
+                    </ul>
+                </li>
+                <li><a href="bookings.html" class="active">Bookings</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="booking-form">
+            <h1>Book Your Stay</h1>
+            <form action="submit_booking.php" method="post">
+                <label for="customer-name">Customer Name</label>
+                <input type="text" id="customer-name" name="customerName" required>
+
+                <!-- Swapping room number and room type fields -->
+                <label for="room-type">Room Type</label>
+                <select id="room-type" name="room_type" required>
+                    <option value="standard" data-price="110">Standard Room - RM110/night</option>
+                    <option value="deluxe" data-price="220">Deluxe Room - RM220/night</option>
+                    <option value="executive" data-price="350">Executive Room - RM350/night</option>
+                </select>
+
+                <label for="room-number">Room Number</label>
+                <select id="room-number" name="room_number" required>
+                    <!-- Room numbers will be populated dynamically -->
+                </select>
+
+                <label for="num-guests">Number of Guests</label>
+                <input type="text" id="num-guests" name="num_guests" required>
+
+                <label for="check-in">Check-in Date</label>
+                <input type="date" id="check-in" name="check_in" required>
+
+                <label for="check-out">Check-out Date</label>
+                <input type="date" id="check-out" name="check_out" required>
+
+                <label for="total-payment">Total Payment (RM)</label>
+                <input type="text" id="total-payment" name="total_payment" readonly>
+
+                <label for="requests">Special Requests</label>
+                <textarea id="requests" name="special_requests" rows="4" placeholder="Any specific requirements or preferences"></textarea>
+
+                <button type="submit">Confirm Booking</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Bukit Pandan Hotel. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms and Conditions</a></p>
+    </footer>
+
+    <script>
+        // Event listener to update available room numbers based on room type
+        document.getElementById('room-type').addEventListener('change', updateRoomNumbers);
+        document.getElementById('check-in').addEventListener('change', calculatePayment);
+        document.getElementById('check-out').addEventListener('change', calculatePayment);
+
+        function updateRoomNumbers() {
+            const roomType = document.getElementById('room-type').value;
+            const roomNumberSelect = document.getElementById('room-number');
+            roomNumberSelect.innerHTML = ''; // Clear previous room numbers
+
+            let startRoom, endRoom;
+            if (roomType === 'standard') {
+                startRoom = 1;
+                endRoom = 50;
+            } else if (roomType === 'deluxe') {
+                startRoom = 51;
+                endRoom = 100;
+            } else if (roomType === 'executive') {
+                startRoom = 101;
+                endRoom = 150;
+            }
+
+            for (let i = startRoom; i <= endRoom; i++) {
+                const option = document.createElement('option');
+                option.value = i;
+                option.textContent = `Room ${i}`;
+                roomNumberSelect.appendChild(option);
+            }
+        }
+
+        function calculatePayment() {
+            const roomType = document.getElementById('room-type');
+            const checkIn = new Date(document.getElementById('check-in').value);
+            const checkOut = new Date(document.getElementById('check-out').value);
+            const pricePerNight = parseInt(roomType.options[roomType.selectedIndex].dataset.price || 0);
+
+            if (checkIn && checkOut && pricePerNight) {
+                const nights = (checkOut - checkIn) / (1000 * 60 * 60 * 24);
+                const totalPayment = nights > 0 ? nights * pricePerNight : 0;
+                document.getElementById('total-payment').value = totalPayment.toFixed(2);
+            } else {
+                document.getElementById('total-payment').value = '';
+            }
+        }
+
+        // Initialize the room numbers based on the default room type
+        updateRoomNumbers();
+    </script>
+</body>
+</html>
